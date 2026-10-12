@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #12161d;
+  --color-ink-soft: #4b5361;
+  --color-ink-mute: #7c8493;
+  --color-paper: #f8f5ef;
+  --color-card: #ffffff;
+  --color-line: #e6dfd3;
+  --color-accent: #d23b1e;
+  --color-accent-dark: #ad2d12;
+  --color-accent-soft: #fbe9e4;
+  --color-jade: #0f7a62;
+  --color-jade-soft: #e3f3ee;
+
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-unbounded), var(--font-manrope), ui-sans-serif, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* убираем стрелки у числовых полей */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise {
+    animation: none;
+  }
+}
+
+/* сетка-«миллиметровка» на фоне hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(18 22 29 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(18 22 29 / 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
