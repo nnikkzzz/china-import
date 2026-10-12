@@ -44,3 +44,7 @@ npm run dev
 | `NEXT_PUBLIC_SITE_URL` | адрес сайта для canonical, sitemap и OG |
 | `NEXT_PUBLIC_DEMO_MODE` | `true` по умолчанию; `false` — боевой режим |
 | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | куда отправлять заявки в боевом режиме |
+
+## Деплой
+
+Vercel подключён к репозиторию: каждый push в `main` собирается и выкладывается в production автоматически, остальные ветки получают preview-ссылки.
