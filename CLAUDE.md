@@ -22,8 +22,9 @@ Next.js 15 (App Router, Turbopack) · TypeScript · Tailwind v4 · React Hook Fo
 ## Текущий фокус
 Портфолио и проверка идеи (решено 2026-10-12). Работает концепт-режим `NEXT_PUBLIC_DEMO_MODE` (по умолчанию true): плашка «Концепт», noindex и robots Disallow, форма ничего не отправляет. Итог калькулятора показывается диапазоном ±12% (`ESTIMATE_SPREAD`). Есть /privacy (шаблон под 152-ФЗ с условным оператором).
 Прод: https://china-import-ten.vercel.app (Vercel, аккаунт parshinnik8-2770, проект china-import). Из РФ открывается без VPN.
-Деплой: `HTTPS_PROXY=http://127.0.0.1:10809 ./node_modules/.bin/vercel deploy --prod --yes` (CLI в devDependencies, API Vercel только через VPN-прокси). Env на Vercel: NEXT_PUBLIC_SITE_URL.
-Дальше: OG-картинка, кейс для портфолио, свой домен.
+Код: https://github.com/nnikkzzz/china-import (публичный). Деплой автоматический: push в `main` → Vercel production. Ручной запасной вариант: `HTTPS_PROXY=http://127.0.0.1:10809 ./node_modules/.bin/vercel deploy --prod --yes` (API Vercel только через VPN-прокси). Env на Vercel: NEXT_PUBLIC_SITE_URL.
+Коммиты: автор nnikkzzz с noreply-почтой (задано в локальном git config).
+Готово: OG-картинки, страница /case, автодеплой. Дальше: свой домен.
 
 ## Уроки этого проекта
 - Оценку на примерных тарифах показывать диапазоном, а не до копейки: точность до копеек выглядит как обещание

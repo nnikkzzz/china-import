@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/case" },
 };
 
+const REPO_URL = "https://github.com/nnikkzzz/china-import";
+
 const pct = (n: number) => `${+(n * 100).toFixed(1)}%`;
 
 const FACTS = [
@@ -188,6 +190,9 @@ export default async function CasePage() {
             <Link href="/" className={buttonClass("primary", "lg")}>
               Открыть лендинг <ArrowUpRight className="size-4" />
             </Link>
+            <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className={buttonClass("ghost", "lg")}>
+              Код на GitHub <ArrowUpRight className="size-4" />
+            </a>
           </div>
         </section>
       </main>
